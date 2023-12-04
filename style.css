@@ -5,6 +5,7 @@
 
 html , body{
     margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
 }
@@ -12,6 +13,7 @@ html , body{
 #screen{
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 #navigation{
@@ -31,4 +33,66 @@ html , body{
 
 #MenuIcon{
     position:absolute;
+    top: 0;
+    left: 0;
+    padding: 12px 15px;
+    cursor: pointer;
 }
+
+#Alert{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 15px;
+}
+
+#map{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    padding: 0;
+}
+
+/* On Screen Button Styling */
+#onScreenBut div{
+    width: 68px;
+    height: 68px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    bottom: 40px;
+}
+
+#Search{
+    left: 15px;
+}
+#Search img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+#Filter{
+    right: 100px;
+}
+#Filter img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+#NearMe{
+    right: 15px;
+}
+#NearMe img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+}
+
