@@ -1,11 +1,15 @@
 // alert("Please set Inspect mode resolution to 540 x 1170 before use")
 
 // Declaring variables for different pages
+const home = document.getElementById("home")
+const search = document.getElementById("SearchPage")
 
 // Declaring variables for different buttons inside the webpage
 const menuIcon = document.getElementById("MenuIcon")
 
 
+// Set Default visibility for each page
+// home.style.display = "none"
 
 
 //Hamburger menu function----------------

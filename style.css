@@ -163,3 +163,115 @@ nav > ul > li > img{
         transform: scaleX(1);
     }   
 }
+
+
+/* Searching Page Style */
+#SearchPage{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 3;
+}
+
+#searchtab{
+    width: 522px;
+    height: 45px;
+    margin: 10px auto;
+    background-color: white;
+    filter: drop-shadow(2px 2px 2px lightgray);
+    position: relative;
+}
+
+
+#inputContainer{
+    width: 450px;
+    height: 40px;
+    border: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#searchinput{
+    width: 450px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+#smallSearch{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-left: 5px;
+    padding-top: 12px;
+}
+
+#txtDel{
+    position: absolute;
+    top:0;
+    right: 0;
+    padding-right: 5px;
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+#searchResult{
+    width: 522px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    filter: drop-shadow(2px 2px 2px lightgray);
+}
+
+.routeResult{
+    width: 100%;
+    height: 70px;
+    border-bottom: solid 1px lightgray;
+    position: relative;
+}
+
+.routeIcon{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-left: 5px;
+    padding-top: 16px;
+}
+
+.routeLabel{
+    position: absolute;
+    top: 0;
+    left: 70px;
+    padding-top: 25px;
+    font-size: 20px;
+}
+
+.stopRestult{
+    width: 100%;
+    height: 70px;
+    border-bottom: solid 1px lightgray;
+    position: relative;
+}
+
+.stopIcon{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-left: 5px;
+    padding-top: 20px;
+}
+
+.stopLabel{
+    position: absolute;
+    top: 0;
+    left: 70px;
+    padding-top: 25px;
+    font-size: 20px;
+}
+/* End */
