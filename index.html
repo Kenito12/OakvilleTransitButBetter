@@ -4,29 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🚌OakvilleTransitButBetter🚌</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="screen">
-        <div id="navigation">
-            <img src="Assets/OakvilleTransit_Logo.png" alt="OakvilleTransit_Logo" id="logo">
-            <img src="Assets/MenuIcon.png" alt="MenuIcon" id="MenuIcon">
-            <img src="Assets/Alert.png" alt="MenuIcon" id="Alert">
-        </div>
-        <div id="map">
-            <img src="Assets/PlaceHolder/MapPlaceholder.png" alt="MapPlaceholder">
-        </div>
-        <div id="onScreenBut">
-            <div id="Search">
-                <img src="Assets/Search.png" alt="Search">
+
+        <!-- HomePage -->
+        <div id="home">
+            <nav id="overlay">
+                <ul>
+                    <li>
+                        <img src="Assets/Home.png" alt="Home">
+                        <label for="Menu">Home</label>
+                    </li>
+                    <li>
+                        <img src="Assets/Favourites.png" alt="Favourites">
+                        <label for="Menu">Favourites</label>
+                    </li>
+                    <li>
+                        <img src="Assets/Stops.png" alt="Stops">
+                        <label for="Menu">Stop Selector</label>
+                    </li>
+                    <li>
+                        <img src="Assets/Feedback.png" alt="Feedback">
+                        <label for="Menu">Feedback</label>
+                    </li>
+                    <li>
+                        <img src="Assets/Bell.png" alt="Bell">
+                        <label for="Menu">My Alerts</label>
+                    </li>
+                    <li>
+                        <img src="Assets/Info.png" alt="Info">
+                        <label for="Menu">Info</label>
+                    </li>
+                    <li>
+                        <img src="Assets/Text.png" alt="Text">
+                        <label for="Menu">Text Only</label>
+                    </li>
+                </ul>
+                <div id="imgContainer">
+                    <img src="Assets/PowerBy.png" alt="PoweredBy">
+                </div>
+            </nav>
+            <div id="transparentLayer"></div>
+            <div id="navigation">
+                <img src="Assets/OakvilleTransit_Logo.png" alt="OakvilleTransit_Logo" id="logo">
+                <img src="Assets/MenuIcon.png" alt="MenuIcon" id="MenuIcon">
+                <img src="Assets/Alert.png" alt="MenuIcon" id="Alert">
             </div>
-            <div id="Filter">
-                <img src="Assets/Filter.png" alt="Filter">
+            <div id="map">
+                <img src="Assets/PlaceHolder/MapPlaceholder.png" alt="MapPlaceholder">
             </div>
-            <div id="NearMe">
-                <img src="Assets/Nearme.png" alt="Nearme">
+            <div id="onScreenBut">
+                <div id="Search">
+                    <img src="Assets/Search.png" alt="Search">
+                </div>
+                <div id="Filter">
+                    <img src="Assets/Filter.png" alt="Filter">
+                </div>
+                <div id="NearMe">
+                    <img src="Assets/Nearme.png" alt="Nearme">
+                </div>
             </div>
         </div>
+        <!-- HomePage -->
     </div>
 </body>
 <script src="script.js"></script>
