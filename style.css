@@ -1,6 +1,7 @@
 /* Color Pallete */
 :root{
     --blue: #2a7bb0;
+    --violet: #9d009a; 
 }
 
 html , body{
@@ -115,7 +116,7 @@ nav{
     left: 0;
     height: 100%;
     width: 47.22%;
-    z-index: 4;
+    z-index: 5;
     display:none;
     transform-origin: left;
     transform: scaleX(0);
@@ -299,4 +300,131 @@ nav > ul > li > img{
     padding-bottom: 40px ;
     padding-right: 20px;
 }
+/* End */
+
+/* Stop Near Me */
+#stopNearMe{
+    width: 100%;
+    height: 194px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    overflow-y: scroll;
+    display: none;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+
+.stopNearMeResult{
+    width: 100%;
+    height: 74px;
+    border-bottom: solid 1px lightgray;
+    display: flex;
+}
+.show-Nearme{
+    display: block !important;
+    animation: slide-search 0.2s ease-in-out forwards;
+}
+.busNumber{
+    align-self: center;
+    padding-left: 20px;
+    font-weight: 500;
+}
+.descp1{
+    align-self: center;
+    font-size: 22px;
+    padding-left: 20px;
+}
+.distance{
+    align-self: center;
+    font-weight: 500;
+    margin-right: 0;
+    margin-left: auto;
+}
+.meter{
+    align-self: center;
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+#SNMTranparent{
+    position: absolute;
+    display: none;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+}
+
+#stops{
+    position: absolute;
+    top: 63.6%;
+    left: 42.5%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    display: none;
+    cursor: pointer;
+}
+
+#currentEstimated{
+    bottom: 0;
+    z-index: 3;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    display: none;
+    position: absolute;
+    width: 100%;
+    height:74px;
+}
+
+.show-current{
+    display: block !important;
+    animation: slide-search 0.2s ease-in-out forwards;
+}
+
+.estimateTime{
+    display: flex;
+    background-color: white;
+}
+
+.colorStrip{
+    width: 9px;
+    height: 74px;
+    background-color: var(--violet);
+}
+
+.currentBusNum{
+    color: var(--violet);
+    align-self: center;
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 31px;
+}
+
+.currentDescp{
+    align-self: center;
+    margin-left: 15px;
+    font-weight: 300;
+    font-size: 20px;
+}
+.currentDescp > span{
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.currentTime{
+    align-self: center;
+    margin-right: 5px;
+    margin-left: auto;
+    color: var(--violet);
+}
+
+.min{
+    align-self: center;
+    margin-right: 15px;
+    color: var(--violet);
+}
+
 /* End */
