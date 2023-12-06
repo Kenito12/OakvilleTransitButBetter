@@ -13,6 +13,8 @@ const searchBtn = document.getElementById("Search")
 const searchExitBtn = document.getElementById("searchExit")
 const nearMeBtn = document.getElementById("NearMe")
 const onScreenBtn = document.getElementById("onScreenBut")
+const currentBusBtn = document.getElementById("currentBus")
+const busIcon = document.getElementById("Busicon")
 
 // Set Default visibility for each page
 
@@ -73,6 +75,13 @@ stops.onclick = () => {
     nearMe.classList.remove("show-Nearme")
     onScreenBtn.style.display = "none"
     estimated.classList.add("show-current")
-    estimated.style.display = "block"
+}
+
+estimated.onclick = () => {
+    stops.style.display = "none"
+    estimated.classList.remove("show-current")
+    mapHolder.src = "Assets/PlaceHolder/MapBusStop.png"
+    currentBusBtn.classList.add("show-current")
+    busIcon.style.display = "block"
 }
 //----------------End-----------------------
