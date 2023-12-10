@@ -1,3 +1,5 @@
+//Using Jquery, AJAX, DOM manipulation
+
 //Declaring pages variables
 splashScreen = getElementById(splashScreen)
 homeScreen = getElementById(homeScreen)
@@ -6,6 +8,7 @@ createAcc = getElementById(createAcc)
 notification = getElementById(notification)
 Favorite = getElementById(Favorite)
 search = getElementById(search)
+BusSchedule = getElementById(BusSchedule)
 
 //Declaring button variables
 navBtn = getElementById(navBtn)
@@ -27,3 +30,61 @@ currentBusBtn = getElementById(currentBusBtn)
 busScheduleBtn = getElementById(busScheduleBtn)
 busScheduleExitBtn = getElementById(busScheduleBtn)
 searchExit = getElementById(searchExit)
+
+//Buttons Functions
+ONCLICK navBtn
+OUTPUT show nav menu
+
+ONCLICK searchBtn
+OUTPUT show search
+
+ONCLICK nearMe 
+OUTPUT show stops AND currentBusBtn
+
+ONCLICK homeBtn
+OUTPUT show homeScreen
+
+ONCLICK AlertBtn
+OUTPUT show notification
+
+ONCLICK FavoriteBtn
+OUTPUT show Favorite
+
+ONCLICK signInExit
+OUTPUT hide signIn
+
+ONCLICK creatAccExit
+OUTPUT hide createAcc
+
+ONCLICK loginBtn
+OUTPUT account login
+
+ONCLICK signUp
+OUTPUT create account
+
+ONCLICK alertBusLoc
+OUTPUT toggle alertBusLoc
+
+ONCLICK alertBusWarn
+OUTPUT toggle alertBusWarn
+
+ONCLICK alertPriority
+OUTPUTtoggle alertPriority
+
+ONCLICK addNewFavorite
+OUTPUT ADD NEW Favorite
+
+ONCLICK stops
+OUTPUT show currentBusBtn
+
+ONCLICK currentBusBtn
+OUTPUT show busScheduleBtn
+
+ONCLICK busScheduleBtn
+OUTPUT show BusSchedule
+
+ONCLICK busScheduleExitBtn
+OUTPUT hide BusSchedule
+
+ONCLICK searchExit
+OUTPUT hide search
