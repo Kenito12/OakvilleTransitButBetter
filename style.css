@@ -477,4 +477,46 @@ nav > ul > li > img{
     left: 280px;
     display: none;
 }
+
+#busRollUp{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 3;
+    display: none;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+
+
+
+#rollUptab{
+    height: 108px;
+    width: 100%;
+    background-color: var(--blue);
+    display: flex;
+}
+
+.rollDescp{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    align-self: center;
+    margin-left: 20px;
+    color: white;
+}
+.rollDescp > span{
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.scheduleResult{
+    width: 100%;
+    height: 74px;
+    background-color: white;
+    display: flex;
+    border-bottom: solid 1px lightgray;
+}
+
 /* End */

@@ -5,6 +5,8 @@ const home = document.getElementById("home")
 const search = document.getElementById("SearchPage")
 const nearMe = document.getElementById("stopNearMe")
 const estimated = document.getElementById("currentEstimated")
+const navigation = document.getElementById("navigation")
+const busRollUp = document.getElementById("busRollUp")
 
 
 // Declaring variables for different buttons inside the webpage
@@ -15,8 +17,11 @@ const nearMeBtn = document.getElementById("NearMe")
 const onScreenBtn = document.getElementById("onScreenBut")
 const currentBusBtn = document.getElementById("currentBus")
 const busIcon = document.getElementById("Busicon")
+const rollUptab = document.getElementById("rollUptab")
+const homeBtn = document.getElementById("homeButton")
 
 // Set Default visibility for each page
+// navigation.style.display = "none"
 
 
 
@@ -84,4 +89,21 @@ estimated.onclick = () => {
     currentBusBtn.classList.add("show-current")
     busIcon.style.display = "block"
 }
+
+currentBusBtn.onclick = () => {
+    navigation.style.display = "none"
+    busRollUp.classList.add("show-current")
+    currentBusBtn.classList.remove("show-current")
+}
+
+rollUptab.onclick = () => {
+    navigation.style.display = "block"
+    busRollUp.classList.remove("show-current")
+    currentBusBtn.classList.add("show-current")
+}
 //----------------End-----------------------
+
+// Set home button funtion to go back to home page when press
+homeBtn.onclick = () => {
+    location.reload();
+}
