@@ -520,3 +520,117 @@ nav > ul > li > img{
 }
 
 /* End */
+
+
+/* Sign-in Page */
+#signIn{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 5;
+    display: none;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+
+#signInContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#signInContainer > div > input[type=text]{
+    height: 37px;
+    width: 410px;
+    border: 1px solid;
+    border-color: lightgray;
+    font-weight: 300;
+    font-size: 24px;
+    margin: 5px;
+}
+
+::placeholder{
+    color: lightgray;
+}
+
+.textContainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#loginBtn{
+    width: 240px;
+    height: 48px;
+    background-color: var(--blue);
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+#loginBtn > h1{
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+#noAcc{
+    margin-bottom: 150px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#noAcc > span {
+    color: var(--blue);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+/* End */
+
+/* Create Acc Page */
+#createAcc{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 5;
+    display: none;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+
+#createAccContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#createAccContainer > div > input[type=text]{
+    height: 37px;
+    width: 410px;
+    border: 1px solid;
+    border-color: lightgray;
+    font-weight: 300;
+    font-size: 24px;
+    margin: 10px;
+}
+
+#SignUpBtn{
+    width: 240px;
+    height: 48px;
+    background-color: var(--blue);
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+#SignUpBtn > h1{
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    padding-top: 7px;
+}
+
+/* End */

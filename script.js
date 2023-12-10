@@ -7,6 +7,8 @@ const nearMe = document.getElementById("stopNearMe")
 const estimated = document.getElementById("currentEstimated")
 const navigation = document.getElementById("navigation")
 const busRollUp = document.getElementById("busRollUp")
+const singIn = document.getElementById("signIn")
+const createAcc = document.getElementById("createAcc")
 
 
 // Declaring variables for different buttons inside the webpage
@@ -19,7 +21,12 @@ const currentBusBtn = document.getElementById("currentBus")
 const busIcon = document.getElementById("Busicon")
 const rollUptab = document.getElementById("rollUptab")
 const homeBtn = document.getElementById("homeButton")
-
+const favouritesBtn = document.getElementById("favouritesBtn")
+const loginBtn = document.getElementById("loginBtn")
+const singUpHere = document.getElementById("singUpHere")
+const singInExit = document.getElementById("singInExit")
+const signUpBtn = document.getElementById("SignUpBtn")
+const signUpexit = document.getElementById("SignUpExit")
 // Set Default visibility for each page
 // navigation.style.display = "none"
 
@@ -107,3 +114,75 @@ rollUptab.onclick = () => {
 homeBtn.onclick = () => {
     location.reload();
 }
+
+
+//Sign in page
+var isSignIn = false
+
+favouritesBtn.onclick = () => {
+    navigation.style.display = "none"
+    overlay.classList.remove("show-menu")
+
+    if (isSignIn){
+        console.log("You're signed in")
+    }
+    else{
+        singIn.classList.add("show-current")
+    }
+}
+
+loginBtn.onclick = () => {
+    var email = document.getElementById("emailIn").value
+    var password = document.getElementById("pwIn").value
+    
+    //check that email and password field must be input if not send an alert
+    if(email && password){
+        console.log("show favoruite")
+        isSignIn = true
+        console.log(isSignIn)
+    }
+    else{
+        alert("please enter Email or Password")
+    }
+}
+
+singUpHere.onclick = () => {
+    createAcc.classList.add("show-current")
+    singIn.classList.remove("show-current")
+}
+
+singInExit.onclick = () => {
+    singIn.classList.remove("show-current")
+    navigation.style.display = "block"
+}
+//----------------End-----------------------
+
+//Sign up page
+signUpBtn.onclick = () => {
+    var email = document.getElementById("emailAcc").value
+    var firstName = document.getElementById("firstName").value
+    var lastName = document.getElementById("lastName").value
+    var pwAcc = document.getElementById("pwAcc").value
+    var conPwAcc = document.getElementById("conPwAcc").value
+
+    //check if all of the input field are filled and the password are matched or not or not if not send an alert
+    if(email && firstName && lastName && pwAcc && conPwAcc){
+        // check if password confirm match
+        if(pwAcc == conPwAcc){
+            isSignIn = true
+            console.log("your'er signed in")
+        }
+        else{
+            alert("Password doens't match")
+        }
+    }
+    else{
+        alert("Please fill up all of the field")
+    }
+}
+
+signUpexit.onclick = () =>{
+    createAcc.classList.remove("show-current")
+    navigation.style.display = "block"
+}
+//----------------End-----------------------
