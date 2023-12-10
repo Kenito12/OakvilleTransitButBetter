@@ -9,6 +9,9 @@ const navigation = document.getElementById("navigation")
 const busRollUp = document.getElementById("busRollUp")
 const singIn = document.getElementById("signIn")
 const createAcc = document.getElementById("createAcc")
+const favoritePage = document.getElementById("favoritePage")
+const logo = document.getElementById("logo")
+const myAlertPage = document.getElementById("myAlertPage")
 
 
 // Declaring variables for different buttons inside the webpage
@@ -27,6 +30,8 @@ const singUpHere = document.getElementById("singUpHere")
 const singInExit = document.getElementById("singInExit")
 const signUpBtn = document.getElementById("SignUpBtn")
 const signUpexit = document.getElementById("SignUpExit")
+const addNewFav = document.getElementById("addNewFav")
+const myAlert = document.getElementById("myAlert")
 // Set Default visibility for each page
 // navigation.style.display = "none"
 
@@ -48,7 +53,7 @@ transparent.onclick = function(){
     overlay.classList.remove("show-menu");
     transparent.style.display = "none";
 }
-//----------------End-----------------------
+
 
 
 // Search Page Function
@@ -60,7 +65,7 @@ searchBtn.onclick = () => {
 searchExitBtn.onclick = () => {
     search.classList.remove("show-search")
 }
-//----------------End-----------------------
+
 
 
 //Stop Near Me Function
@@ -108,7 +113,7 @@ rollUptab.onclick = () => {
     busRollUp.classList.remove("show-current")
     currentBusBtn.classList.add("show-current")
 }
-//----------------End-----------------------
+
 
 // Set home button funtion to go back to home page when press
 homeBtn.onclick = () => {
@@ -117,16 +122,23 @@ homeBtn.onclick = () => {
 
 
 //Sign in page
+
+//if user is sing in = true
 var isSignIn = false
 
-favouritesBtn.onclick = () => {
-    navigation.style.display = "none"
-    overlay.classList.remove("show-menu")
 
+// When favorite in nav click check isSignIn = true if yes show favorite page if not bring to signin
+favouritesBtn.onclick = () => {
+    overlay.classList.remove("show-menu")
     if (isSignIn){
-        console.log("You're signed in")
+        favoritePage.classList.add("show-current")
+        logo.src = "Assets/Favourites.png"
+        currentBusBtn.classList.remove("show-current")
+
+        
     }
     else{
+        navigation.style.display = "none"
         singIn.classList.add("show-current")
     }
 }
@@ -139,7 +151,11 @@ loginBtn.onclick = () => {
     if(email && password){
         console.log("show favoruite")
         isSignIn = true
-        console.log(isSignIn)
+        singIn.classList.remove("show-current")
+        navigation.style.display = "block"
+        favoritePage.classList.add("show-current")
+        logo.src = "Assets/Favourite.png"
+        currentBusBtn.classList.remove("show-current")
     }
     else{
         alert("please enter Email or Password")
@@ -155,7 +171,7 @@ singInExit.onclick = () => {
     singIn.classList.remove("show-current")
     navigation.style.display = "block"
 }
-//----------------End-----------------------
+
 
 //Sign up page
 signUpBtn.onclick = () => {
@@ -170,7 +186,12 @@ signUpBtn.onclick = () => {
         // check if password confirm match
         if(pwAcc == conPwAcc){
             isSignIn = true
+            createAcc.classList.remove("show-current")
+            navigation.style.display = "block"
             console.log("your'er signed in")
+            favoritePage.classList.add("show-current")
+            logo.src = "Assets/Favourite.png"
+            currentBusBtn.classList.remove("show-current")
         }
         else{
             alert("Password doens't match")
@@ -185,4 +206,11 @@ signUpexit.onclick = () =>{
     createAcc.classList.remove("show-current")
     navigation.style.display = "block"
 }
-//----------------End-----------------------
+
+
+// My Alert
+myAlert.onclick = () => {
+    logo.src = "Assets/My Alert.png"
+    overlay.classList.remove("show-menu")
+    myAlertPage.classList.add("show-current")
+}
